@@ -1,4 +1,3 @@
-
 package MoodAnalyzer;
 
 
@@ -16,10 +15,16 @@ public void setMessage(String message) {
 }
 
 public String moodAnalyze_Sad(String message) {
+	
+	try {
 	if(message.contains("Sad"))
 		return "SAD";
 	else
 		return "HAPPY";
+	}
+	catch(NullPointerException e){
+		return "HAPPY";
+	}
 }
 
 }

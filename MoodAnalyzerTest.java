@@ -8,12 +8,12 @@ public class MoodAnalyzerTest {
 
 
 @Test
-public void Analyze_Sad_Shoul_return_Sad_Mood() {
+public void Analyze_Happy_Shoul_return_Happy_Mood() {
 
 	MoodAnalyzer moodAnalyzer = new  MoodAnalyzer();
 
-	String mood = moodAnalyzer.moodAnalyze_Sad("I am in Sad Mood");
-	 assertSame("Please check the method in main", "SAD", mood);
+	String mood = moodAnalyzer.moodAnalyze_Sad("I am in Happy Mood");
+	 assertSame("Please check the method in main", "HAPPY", mood);
 	}
 }
 

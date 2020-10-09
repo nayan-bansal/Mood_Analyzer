@@ -23,7 +23,10 @@ public String moodAnalyze() throws MoodAnalysisException {
 		return "HAPPY";
 	}
 	catch(NullPointerException e){
-		throw new MoodAnalysisException("Please provide valid arguements, not null arguements");
+		if(message==null)
+			throw new MoodAnalysisException("Please provide valid details, dont provide null in arguments");
+		else
+			throw new MoodAnalysisException("Please provide valid details, dont keep empty in arguments");
 	}
 }
 

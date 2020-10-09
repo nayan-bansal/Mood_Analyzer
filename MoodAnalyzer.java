@@ -14,7 +14,7 @@ public void setMessage(String message) {
 	this.message = message;
 }
 
-public String moodAnalyze_Sad(String message) {
+public String moodAnalyze() throws MoodAnalysisException {
 	
 	try {
 	if(message.contains("Sad"))
@@ -23,7 +23,7 @@ public String moodAnalyze_Sad(String message) {
 		return "HAPPY";
 	}
 	catch(NullPointerException e){
-		return "HAPPY";
+		throw new MoodAnalysisException("Please provide valid arguements, not null arguements");
 	}
 }
 

@@ -20,5 +20,20 @@ public void Analyze_Happy() {
 	}
 
 }
+
+@Test
+public void Analyze_Empty() {
+
+	MoodAnalyzer moodAnalyzer = new  MoodAnalyzer();
+
+	try {
+		String mood = moodAnalyzer.moodAnalyze();
+		assertSame("Please provide valid details, dont provide empty", mood);
+	} 
+	catch (MoodAnalysisException e) {
+		e.getMessage();
+	}
+
 }
 
+}
